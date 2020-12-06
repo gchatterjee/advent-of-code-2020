@@ -31,4 +31,5 @@ jobs:
       - name: Compile
         run: |
           npm i
+          npm run compile:prod
           npm run deploy
