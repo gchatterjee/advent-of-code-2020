@@ -25,17 +25,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: install node
+      - name: Install Node
         uses: actions/setup-node@v2.1.2
 
-      - name: compile site
+      - name: Compile
         run: |
           npm i
           npm run compile:prod
           
-      - name: deploy to github pages
-        uses: crazy-max/ghaction-github-pages@v2.2.0
+      -
+        name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
         with:
+          target_branch: gh-pages
           build_dir: public
-          jekyll: false
-      
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
