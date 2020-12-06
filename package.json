@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:dev": "concurrently \"webpack -w\" \"sass --watch src/style/main.scss src/style/main.css\"",
     "compile:prod": "sass src/style/main.scss src/style/main.css; webpack",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/gchatterjee/advent-of-code-2020/issues"
   },
-  "homepage": "https://github.com/gchatterjee/advent-of-code-2020#readme",
+  "homepage": "https://gchatterjee.github.com/io/advent-of-code-2020/",
   "dependencies": {
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
@@ -43,6 +44,7 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.0",
     "patch-package": "^6.2.2",
     "prettier": "^2.1.2",

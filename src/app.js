@@ -8,7 +8,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route path='/:day([1-2][0-9]|3[0-1]|[1-9])' component={Day} />
             <Route path='/' exact={true} component={Home} />
