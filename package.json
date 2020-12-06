@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/gchatterjee/advent-of-code-2020/issues"
   },
-  "homepage": "https://gchatterjee.github.com/io/advent-of-code-2020/",
+  "homepage": "https://gchatterjee.github.io",
   "dependencies": {
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
