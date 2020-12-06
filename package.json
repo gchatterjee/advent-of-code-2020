@@ -8,7 +8,8 @@
     "lint:fix": "eslint --fix './*.js'; eslint --fix 'src/**/*.js'; prettier --write './*.json'; prettier --write './*.md'; prettier --write 'src/**/*.scss'",
     "start": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "concurrently \"webpack -w\" \"sass --watch src/style/main.scss src/style/main.css\"",
+    "compile:dev": "concurrently \"webpack -w\" \"sass --watch src/style/main.scss src/style/main.css\"",
+    "compile:prod": "sass src/style/main.scss src/style/main.css; webpack",
     "postinstall": "patch-package"
   },
   "repository": {
