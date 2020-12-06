@@ -4,14 +4,15 @@ import PropTypes from 'prop-types'
 export default class Jumbotron extends React.Component {
   render() {
     return (
-      <section className='hero is-large is-primary is-bold'>
-        <div className='hero-body'>
-          <div className='container'>
-            <h1 className='title'>{this.props.title}</h1>
-            <h2 className='subtitle'>{this.props.subtitle}</h2>
-          </div>
-        </div>
-      </section>
+      <div class="jumbotron">
+        <h1 class="display-4">{this.props.title}</h1>
+        <p class="lead">{this.props.subtitle}</p>
+        <hr class="my-4" />
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
     )
   }
 }

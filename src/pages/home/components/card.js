@@ -9,10 +9,15 @@ export default class Card extends React.Component {
     const isEnabled = isDay && Object.keys(days).includes(`${this.props.day}`)
     const disabled = isEnabled ? {} : { disabled: '' }
     const color = isDay && isEnabled ? 'is-primary' : ''
+    const visibility = isDay ? '' : 'd-none d-lg-block'
 
     return (
-      <div className={`tile is-child notification ${color}`} {...disabled}>
-        {isDay && <p className='title'>{this.props.day}</p>}
+      <div className={`col-lg col-md-12 card calendar-box ${visibility}`}>
+        <div className='card-body'>
+        <h5 className='card-title'>
+        {isDay && <p>{`Day ${this.props.day}`}</p>}
+        </h5>
+        </div>
       </div>
     )
   }

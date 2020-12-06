@@ -1,9 +1,6 @@
-@import '../../node_modules/bulma/bulma';
+@import 'custom';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
-#calendar {
-  margin: 1.5rem;
-
-  .is-parent {
-    width: auto;
-  }
+.calendar-box {
+  margin: 0.5rem;
 }
