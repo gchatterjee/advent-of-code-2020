@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/advent-of-code-2020/',
   },
   module: {
     rules: [
