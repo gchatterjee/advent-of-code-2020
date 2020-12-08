@@ -5,3 +5,34 @@
   margin: 0.5rem;
   text-align: left;
 }
+
+.step {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hljs {
+  border-radius: 0.25rem;
+}
+
+.caption {
+  color: gray;
+  text-align: right;
+}
+
+.console {
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+.console {
+  scrollbar-width: 0;
+}
+.console::-webkit-scrollbar {
+  width: 0px;
+}
+.console::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  border: 0px;
+}
