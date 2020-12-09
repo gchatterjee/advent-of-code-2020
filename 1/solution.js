@@ -1,15 +1,16 @@
 const fs = require('fs')
+const path = require('path')
 
 let input
 
-function getInput() {
+const getInput = () => {
   if (!input) {
-    input = fs.readFileSync(`/input.txt`)
+    input = fs.readFileSync(path.resolve(__dirname, './input.txt'), 'utf-8')
   }
   return input
 }
 
-function partOne() {
+const partOne = () => {
   const inputNums = getInput()
     .split('\n')
     .map((n) => parseInt(n, 10))
@@ -29,7 +30,7 @@ function partOne() {
   return products.length > 0 && products[0]
 }
 
-function partTwo() {
+const partTwo = () => {
   const inputNums = getInput()
     .split('\n')
     .map((n) => parseInt(n, 10))

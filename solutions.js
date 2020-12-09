@@ -1,26 +1,19 @@
-const Day1 = require('./1/solution.js')
+const Day1 = require('./1/solution')
+const Day2 = require('./2/solution')
+const Day3 = require('./3/solution')
 
-const printDay = (day) => console.log(`\n=== Day ${day} ===`)
+const printDay = (day) => console.log(`\nDay ${day} ===`)
 const printSolution = (part, solution) =>
   console.log(`    Part ${part}: ${solution()}`)
 
-const solutions = [
-  {
-    day: 1,
-    parts: {
-      One: Day1.partOne,
-      Two: Day1.partTwo,
-    },
-  },
-]
+const solutions = [Day1, Day2, Day3]
 
-function run() {
+const run = () => {
   console.log('SOLUTIONS')
-  solutions.forEach(({ day, parts }) => {
+  solutions.forEach((solutions, day) => {
     printDay(day)
-    Object.entries(parts).forEach(([part, solution]) =>
-      printSolution(part, solution),
-    )
+    printSolution('One', solutions.partOne)
+    printSolution('Two', solutions.partTwo)
   })
 }
 
