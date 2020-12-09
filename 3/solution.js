@@ -1,18 +1,12 @@
-const fs = require('fs')
 const path = require('path')
+const getInput = require('../lib/getInput')
 
-let input
-const getInput = () => {
-  if (!input) {
-    input = fs.readFileSync(path.resolve(__dirname, './input.txt'), 'utf-8')
-  }
-  return input
-}
+let inputPath = path.resolve(__dirname, './input.txt')
 
 const TREE = '#'
 
 const countTrees = (right, down, initRow = 0, initCol = 0) => {
-  const rows = getInput()
+  const rows = getInput(inputPath)
     .trim()
     .split('\n')
     .map((row) => row.split(''))

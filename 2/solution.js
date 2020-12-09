@@ -1,19 +1,13 @@
-const fs = require('fs')
 const path = require('path')
+const getInput = require('../lib/getInput')
 
-let input
-const getInput = () => {
-  if (!input) {
-    input = fs.readFileSync(path.resolve(__dirname, './input.txt'), 'utf-8')
-  }
-  return input
-}
+let inputPath = path.resolve(__dirname, './input.txt')
 
 let parsedInput
 const getParsedInput = () => {
   const regex = /(?<num1>[0-9]+)-(?<num2>[0-9]+) (?<character>.): (?<password>.*)/
   if (!parsedInput) {
-    parsedInput = getInput()
+    parsedInput = getInput(inputPath)
       .trim()
       .split('\n')
       .map((line) => regex.exec(line).groups)
