@@ -1,4 +1,3 @@
-const { ECHILD } = require('constants')
 const path = require('path')
 const getInput = require('../lib/getInput')
 
