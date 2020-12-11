@@ -4,12 +4,13 @@ const Day3 = require('./3/solution')
 const Day4 = require('./4/solution')
 const Day5 = require('./5/solution')
 const Day6 = require('./6/solution')
+const Day7 = require('./7/solution')
 
 const printDay = (day) => console.log(`\nDay ${day} ===`)
 const printSolution = (part, solution) =>
   console.log(`    Part ${part}: ${solution()}`)
 
-const solutions = [Day1, Day2, Day3, Day4, Day5, Day6]
+const solutions = [Day1, Day2, Day3, Day4, Day5, Day6, Day7]
 
 const run = () => {
   console.log('SOLUTIONS')
