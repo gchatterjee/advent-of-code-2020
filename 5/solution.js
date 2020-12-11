@@ -1,7 +1,7 @@
 const path = require('path')
 const getInput = require('../lib/getInput')
 
-let inputPath = path.resolve(__dirname, './input.txt')
+const inputPath = path.resolve(__dirname, './input.txt')
 
 const parsedInput = getInput(inputPath).trim().split('\n')
 
