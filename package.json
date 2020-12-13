@@ -4,7 +4,8 @@
   "description": "Advent of Code 2020 solutions",
   "main": "solutions.js",
   "scripts": {
-    "lint:fix": "eslint --fix './**/*.js'; prettier --write './**/*.json'; prettier --write './**/*.md'"
+    "lint:fix": "eslint --fix './**/*.js'; prettier --write './**/*.json'; prettier --write './**/*.md'",
+    "start": "node solutions"
   },
   "repository": {
     "type": "git",
